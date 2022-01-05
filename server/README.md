@@ -1,0 +1,13 @@
+# NOTES DURING CODING:
+ - Using Session/Cookies for authentication
+ - Use Argon2 for password hashing instead of Bcrypt
+ - Use TypeORM for relational mapping
+ - Redis for its speed: use connect-redis library
+ - URQL, GraphQL Code Generator
+ - SSR with URQL and GraphQL
+    - need to setup a separate package (next-urql for )
+    - withUrqlClient lets us decide which pages use SSR by optionally wrapping components
+    - SSR optimizes SEO because in client side rendering the javascript is not updated on content load for google crawling
+    - SSR only necessary for pages where queries are happening and then where the content will optimize SEO or not
+ - Use NodeMailer to handle forgot password (sends email to user)
+ - uuid + ioredis creates and stores a unique id to send for password reset email
